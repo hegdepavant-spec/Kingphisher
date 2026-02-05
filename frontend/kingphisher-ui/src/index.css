@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   GLOBAL STYLES
+================================ */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+}
+
+/* ===============================
+   APP BACKGROUND
+================================ */
+
+.app-bg {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      rgba(10, 15, 30, 0.88),
+      rgba(10, 15, 30, 0.88)
+    ),
+    url("/src/assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ===============================
+   KINGPHISHER TITLE (BIG & STYLISH)
+================================ */
+
+.kingphisher-title {
+  font-size: 3.5rem;          /* BIG */
+  font-weight: 800;
+  letter-spacing: 0.15em;     /* spaced letters */
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #22d3ee,
+    #60a5fa
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(56, 189, 248, 0.35),
+    0 0 25px rgba(34, 211, 238, 0.25);
+}
+
+/* ===============================
+   SUBTITLE UNDER TITLE
+================================ */
+
+.kingphisher-subtitle {
+  text-align: center;
+  color: #cbd5f5;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+/* ===============================
+   GLASS CARD EFFECT
+================================ */
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* ===============================
+   BUTTON POLISH
+================================ */
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+}
+
+/* ===============================
+   INPUT STYLE
+================================ */
+
+.input-box {
+  background: rgba(51, 65, 85, 0.9);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  outline: none;
+}
+
+/* ===============================
+   SMOOTH TRANSITIONS
+================================ */
+
+* {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
