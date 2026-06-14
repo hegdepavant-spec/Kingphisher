@@ -3,36 +3,79 @@
 <head>
   <style>
     body {
-      width: 260px;
-      font-family: system-ui, Arial;
+      width: 320px;
+      font-family: system-ui, Arial, sans-serif;
       padding: 14px;
+      margin: 0;
+      background: #0f172a;
+      color: #f8fafc;
     }
     h3 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
+      font-size: 18px;
     }
     .card {
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 12px;
       color: white;
       margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.16);
     }
+    .safe { background: #15803d; }
+    .suspicious { background: #b45309; }
+    .phishing { background: #b91c1c; }
+    .unknown { background: #475569; }
     .site {
+      margin-top: 4px;
       font-size: 12px;
       opacity: 0.9;
+      word-break: break-all;
     }
-    .confidence {
-      font-size: 11px;
-      margin-top: 4px;
-      opacity: 0.85;
+    .metric {
+      font-size: 12px;
+      margin-top: 6px;
+      opacity: 0.92;
+    }
+    button {
+      width: 100%;
+      margin-top: 12px;
+      border: 1px solid rgba(34, 211, 238, 0.45);
+      border-radius: 8px;
+      background: #0891b2;
+      color: #ecfeff;
+      padding: 10px 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+    .history-summary {
+      margin-top: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 8px;
+      background: rgba(2, 6, 23, 0.55);
+      padding: 10px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 1.35;
     }
   </style>
 </head>
 <body>
-  <h3>KingPhisher</h3>
+  <h3>KingPhisher Protection</h3>
 
-  <div id="statusCard" class="card">
+  <div id="statusCard" class="card unknown">
     Loading status...
   </div>
+  <button id="historyScanButton">Scan browser history</button>
+  <div id="historySummary" class="history-summary">History scan not run yet.</div>
 
   <script src="popup.js"></script>
 </body>

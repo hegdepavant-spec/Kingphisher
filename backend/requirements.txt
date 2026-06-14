@@ -1,8 +1,15 @@
 flask
+flask-cors
 pandas
 scikit-learn
+xgboost
+lightgbm
+transformers
+torch
 joblib
 requests
 beautifulsoup4
+pillow
 pytesseract
 opencv-python
+pyzbar

@@ -1,0 +1,47 @@
+{
+  "task": "OCR Text Detection",
+  "selection_metric_order": [
+    "f1_score",
+    "recall",
+    "precision",
+    "accuracy"
+  ],
+  "best_model": "TF-IDF + Logistic Regression",
+  "models": {
+    "TF-IDF + Logistic Regression": {
+      "accuracy": 0.9882,
+      "precision": 0.9778,
+      "recall": 1.0,
+      "f1_score": 0.9888,
+      "confusion_matrix": [
+        [
+          40,
+          1
+        ],
+        [
+          0,
+          44
+        ]
+      ]
+    },
+    "TF-IDF + XGBoost": {
+      "accuracy": 0.9294,
+      "precision": 1.0,
+      "recall": 0.8636,
+      "f1_score": 0.9268,
+      "confusion_matrix": [
+        [
+          41,
+          0
+        ],
+        [
+          6,
+          38
+        ]
+      ]
+    }
+  },
+  "skipped": {
+    "DistilBERT": "distilbert-base-uncased is not available in the local Hugging Face cache: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.\nCheck your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'."
+  }
+}

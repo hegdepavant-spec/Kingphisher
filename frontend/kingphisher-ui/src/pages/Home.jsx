@@ -2,19 +2,19 @@ export default function Home({ setPage }) {
   return (
     <div className="flex flex-col items-center justify-center mt-28 px-4 text-center">
       
-      {/* BIG STYLISH TITLE */}
+      
       <h1 className="kingphisher-title">KINGPHISHER</h1>
 
-      {/* SUBTITLE / USER GUIDANCE */}
+     
       <p className="kingphisher-subtitle">
         Protect yourself from phishing attacks.  
         Scan suspicious links before opening them or continue browsing normally.
       </p>
 
-      {/* ACTION CARDS */}
+      
       <div className="flex flex-col md:flex-row gap-8 mt-8">
         
-        {/* SCAN CARD */}
+     
         <div
           onClick={() => setPage("scan")}
           className="glass-card cursor-pointer w-80 p-6
@@ -26,7 +26,7 @@ export default function Home({ setPage }) {
           </p>
         </div>
 
-        {/* NORMAL TAB CARD */}
+      
         <div
           onClick={() => window.open("https://www.google.com", "_blank")}
           className="glass-card cursor-pointer w-80 p-6

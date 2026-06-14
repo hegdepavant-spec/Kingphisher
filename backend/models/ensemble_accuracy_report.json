@@ -1,0 +1,230 @@
+{
+  "task": "Weighted Ensemble",
+  "weights": {
+    "url": 0.4,
+    "ocr": 0.35,
+    "html": 0.25
+  },
+  "html_analysis": "Explainable rule-based scoring; offline benchmark uses supplied html_score.",
+  "html_score_source": "neutral fallback",
+  "positive_threshold": 0.5,
+  "sample_count": 43,
+  "metrics": {
+    "accuracy": 0.9767,
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1_score": 0.9474,
+    "confusion_matrix": [
+      [
+        33,
+        1
+      ],
+      [
+        0,
+        9
+      ]
+    ]
+  },
+  "sample_predictions": [
+    {
+      "url_score": 0.436,
+      "ocr_score": 0.1,
+      "html_score": 0.5,
+      "ensemble_score": 0.3344,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.367,
+      "ocr_score": 0.11,
+      "html_score": 0.5,
+      "ensemble_score": 0.3103,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.095,
+      "ocr_score": 0.29,
+      "html_score": 0.5,
+      "ensemble_score": 0.2645,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.279,
+      "ocr_score": 0.87,
+      "html_score": 0.5,
+      "ensemble_score": 0.5411,
+      "actual": 1,
+      "predicted": 1
+    },
+    {
+      "url_score": 0.119,
+      "ocr_score": 0.32,
+      "html_score": 0.5,
+      "ensemble_score": 0.2846,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.012,
+      "ocr_score": 0.29,
+      "html_score": 0.5,
+      "ensemble_score": 0.2313,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.382,
+      "ocr_score": 0.12,
+      "html_score": 0.5,
+      "ensemble_score": 0.3198,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.9,
+      "ocr_score": 0.64,
+      "html_score": 0.5,
+      "ensemble_score": 0.709,
+      "actual": 1,
+      "predicted": 1
+    },
+    {
+      "url_score": 0.016,
+      "ocr_score": 0.23,
+      "html_score": 0.5,
+      "ensemble_score": 0.2119,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.228,
+      "ocr_score": 0.34,
+      "html_score": 0.5,
+      "ensemble_score": 0.3352,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.45,
+      "ocr_score": 0.29,
+      "html_score": 0.5,
+      "ensemble_score": 0.4065,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.661,
+      "ocr_score": 0.28,
+      "html_score": 0.5,
+      "ensemble_score": 0.4874,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.016,
+      "ocr_score": 0.13,
+      "html_score": 0.5,
+      "ensemble_score": 0.1769,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.018,
+      "ocr_score": 0.1,
+      "html_score": 0.5,
+      "ensemble_score": 0.1672,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.026,
+      "ocr_score": 0.1,
+      "html_score": 0.5,
+      "ensemble_score": 0.1704,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.734,
+      "ocr_score": 0.13,
+      "html_score": 0.5,
+      "ensemble_score": 0.4641,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.362,
+      "ocr_score": 0.56,
+      "html_score": 0.5,
+      "ensemble_score": 0.4658,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.024,
+      "ocr_score": 0.18,
+      "html_score": 0.5,
+      "ensemble_score": 0.1976,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.923,
+      "ocr_score": 0.89,
+      "html_score": 0.5,
+      "ensemble_score": 0.8057,
+      "actual": 1,
+      "predicted": 1
+    },
+    {
+      "url_score": 0.198,
+      "ocr_score": 0.08,
+      "html_score": 0.5,
+      "ensemble_score": 0.2322,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.302,
+      "ocr_score": 0.13,
+      "html_score": 0.5,
+      "ensemble_score": 0.2913,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.587,
+      "ocr_score": 0.5,
+      "html_score": 0.5,
+      "ensemble_score": 0.5348,
+      "actual": 1,
+      "predicted": 1
+    },
+    {
+      "url_score": 1.0,
+      "ocr_score": 0.85,
+      "html_score": 0.5,
+      "ensemble_score": 0.8225,
+      "actual": 1,
+      "predicted": 1
+    },
+    {
+      "url_score": 0.021,
+      "ocr_score": 0.13,
+      "html_score": 0.5,
+      "ensemble_score": 0.1789,
+      "actual": 0,
+      "predicted": 0
+    },
+    {
+      "url_score": 0.669,
+      "ocr_score": 0.09,
+      "html_score": 0.5,
+      "ensemble_score": 0.4241,
+      "actual": 0,
+      "predicted": 0
+    }
+  ]
+}

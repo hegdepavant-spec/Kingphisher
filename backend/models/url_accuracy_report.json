@@ -1,0 +1,60 @@
+{
+  "task": "URL Detection",
+  "selection_metric_order": [
+    "f1_score",
+    "recall",
+    "precision",
+    "accuracy"
+  ],
+  "best_model": "Random Forest",
+  "models": {
+    "Random Forest": {
+      "accuracy": 0.8381,
+      "precision": 0.6183,
+      "recall": 0.7345,
+      "f1_score": 0.6714,
+      "confusion_matrix": [
+        [
+          68258,
+          10361
+        ],
+        [
+          6065,
+          16780
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 0.8684,
+      "precision": 0.834,
+      "recall": 0.519,
+      "f1_score": 0.6398,
+      "confusion_matrix": [
+        [
+          76259,
+          2360
+        ],
+        [
+          10988,
+          11857
+        ]
+      ]
+    },
+    "LightGBM": {
+      "accuracy": 0.8174,
+      "precision": 0.5719,
+      "recall": 0.7524,
+      "f1_score": 0.6498,
+      "confusion_matrix": [
+        [
+          65751,
+          12868
+        ],
+        [
+          5656,
+          17189
+        ]
+      ]
+    }
+  }
+}
