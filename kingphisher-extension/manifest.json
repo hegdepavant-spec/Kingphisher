@@ -3,8 +3,8 @@
   "name": "KingPhisher",
   "version": "1.0",
   "description": "Detection and prevention platform for phishing, credential theft, and QR phishing",
-  "permissions": ["tabs", "storage", "history"],
-  "host_permissions": ["http://127.0.0.1:5000/*"],
+  "permissions": ["tabs", "activeTab", "storage", "history"],
+  "host_permissions": ["http://127.0.0.1:5000/*", "http://*/*", "https://*/*"],
   "background": {
     "service_worker": "background.js"
   },

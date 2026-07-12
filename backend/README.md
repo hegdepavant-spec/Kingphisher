@@ -157,30 +157,31 @@ Content-Type: application/json
 }
 ```
 
-### Ensemble Detection
+### Manual URL Scan
 
 ```http
 POST /api/ensemble
 Content-Type: application/json
 
 {
-  "url": "https://example.com/login",
-  "use_html": true,
-  "ocr_text": "optional extracted text"
+  "url": "https://example.com/login"
 }
 ```
 
-The ensemble response contains module-level details and a final score:
+Manual URL scans run URL ML, fetch the webpage source, run HTML analysis, and combine URL + HTML scores. OCR is not run because no screenshot is available. If HTML fetching fails, the response falls back to URL ML only and includes the failure reason.
 
 ```json
 {
   "prediction": "Phishing",
-  "confidence": 91,
+  "confidence": 95,
   "risk_score": 0.84,
+  "url_score": 90,
+  "html_score": 97,
+  "ocr_score": null,
   "reasons": ["High URL risk", "Suspicious HTML indicators"],
   "details": [
     {
-      "module": "URL",
+      "module": "URL ML",
       "result": {
         "prediction": "Phishing",
         "risk_score": 0.88,
@@ -190,6 +191,19 @@ The ensemble response contains module-level details and a final score:
   ]
 }
 ```
+
+### Chrome Extension Scan
+
+```http
+POST /api/ensemble
+Content-Type: multipart/form-data
+
+url=https://example.com/login
+image=<webpage screenshot>
+source=extension
+```
+
+Chrome extension scans run URL ML and OCR only. HTML analysis is not run in this mode. If OCR extraction or OCR ML scoring fails, the response falls back to URL ML only and includes the failure reason.
 
 ### Accuracy Reports
 

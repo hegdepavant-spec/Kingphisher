@@ -6,6 +6,7 @@ from PIL import Image
 
 import app
 import services.html_analyzer as html_analyzer
+import services.ocr_service as ocr_service
 
 
 OCR_TEXT = (
@@ -45,7 +46,7 @@ def make_image_upload():
 
 def main():
     html_analyzer.requests.get = fake_get
-    app.pytesseract = types.SimpleNamespace(image_to_string=lambda image: OCR_TEXT)
+    ocr_service.pytesseract = types.SimpleNamespace(image_to_string=lambda image: OCR_TEXT)
     client = app.app.test_client()
 
     url_response = client.post("/api/url", json={"url": "https://example.com/login"})
@@ -77,20 +78,40 @@ def main():
     assert "prediction" in html_data
     print("HTML workflow:", html_data)
 
-    ensemble_response = client.post(
+    manual_response = client.post(
         "/api/ensemble",
         json={
             "url": "https://example.com/login",
-            "ocr_text": OCR_TEXT,
-            "use_html": True,
         },
     )
-    assert ensemble_response.status_code == 200, ensemble_response.get_data(as_text=True)
-    ensemble_data = ensemble_response.get_json()
-    assert len(ensemble_data["details"]) == 3
-    assert "prediction" in ensemble_data
-    assert "risk_score" in ensemble_data
-    print("Ensemble workflow:", ensemble_data)
+    assert manual_response.status_code == 200, manual_response.get_data(as_text=True)
+    manual_data = manual_response.get_json()
+    assert manual_data["scan_mode"] == "manual_url"
+    assert len(manual_data["details"]) == 2
+    assert manual_data["html_score"] is not None
+    assert manual_data["ocr_score"] is None
+    assert "prediction" in manual_data
+    assert "risk_score" in manual_data
+    print("Manual URL workflow:", manual_data)
+
+    extension_image = make_image_upload()
+    extension_response = client.post(
+        "/api/ensemble",
+        data={
+            "url": "https://example.com/login",
+            "source": "extension",
+            "image": (extension_image, "page-screenshot.png"),
+        },
+        content_type="multipart/form-data",
+    )
+    assert extension_response.status_code == 200, extension_response.get_data(as_text=True)
+    extension_data = extension_response.get_json()
+    assert extension_data["scan_mode"] == "chrome_extension"
+    assert len(extension_data["details"]) == 2
+    assert extension_data["ocr_score"] is not None
+    assert extension_data["html_score"] is None
+    assert extension_data["extracted_text"] == OCR_TEXT
+    print("Chrome extension workflow:", extension_data)
 
     return 0
 

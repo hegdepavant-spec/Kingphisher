@@ -17,11 +17,46 @@ const verdictColors = {
   Phishing: "red"
 };
 
-async function scanUrl(url) {
+function dataUrlToBlob(dataUrl) {
+  const [header, base64] = dataUrl.split(",");
+  const mime = header.match(/data:(.*?);base64/)?.[1] || "image/png";
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) {
+    bytes[index] = binary.charCodeAt(index);
+  }
+  return new Blob([bytes], { type: mime });
+}
+
+function captureVisibleScreenshot(windowId) {
+  return new Promise((resolve) => {
+    chrome.tabs.captureVisibleTab(
+      windowId,
+      { format: "png" },
+      (dataUrl) => {
+        if (chrome.runtime.lastError || !dataUrl) {
+          console.warn("[KingPhisher] Screenshot capture failed:", chrome.runtime.lastError?.message);
+          resolve(null);
+          return;
+        }
+        resolve(dataUrl);
+      }
+    );
+  });
+}
+
+async function scanUrl(url, tabWindowId = chrome.windows.WINDOW_ID_CURRENT) {
+  const screenshot = await captureVisibleScreenshot(tabWindowId);
+  const formData = new FormData();
+  formData.append("url", url);
+  formData.append("source", "extension");
+  if (screenshot) {
+    formData.append("image", dataUrlToBlob(screenshot), "page-screenshot.png");
+  }
+
   const response = await fetch(`${API_BASE}/api/ensemble`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ url, use_html: true })
+    body: formData
   });
 
   const data = await response.json();
@@ -120,7 +155,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.type === "SCAN_URL") {
-    scanUrl(msg.url)
+    scanUrl(msg.url, sender.tab?.windowId)
       .then((result) => sendResponse({ ok: true, result }))
       .catch((error) => sendResponse({ ok: false, error: error.message }));
     return true;

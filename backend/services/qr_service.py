@@ -3,8 +3,6 @@ from io import BytesIO
 
 from PIL import Image
 
-from services.ensemble_service import ensemble_decision
-
 
 logger = logging.getLogger(__name__)
 
@@ -51,22 +49,3 @@ def decode_qr_image(file_storage):
     logger.info("QR decode complete: %s", decoded_url)
     return decoded_url
 
-
-def analyze_qr_image(file_storage):
-    decoded_url = decode_qr_image(file_storage)
-    detection = ensemble_decision(decoded_url, use_html=True)
-    reasons = [
-        f"Decoded QR URL: {decoded_url}",
-        *detection.get("reasons", []),
-    ]
-
-    return {
-        "decoded_url": decoded_url,
-        "prediction": detection.get("prediction"),
-        "verdict": detection.get("verdict"),
-        "risk_score": detection.get("risk_score"),
-        "confidence": detection.get("confidence"),
-        "explanation": reasons,
-        "reasons": reasons,
-        "details": detection.get("details", []),
-    }

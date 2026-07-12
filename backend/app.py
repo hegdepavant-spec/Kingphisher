@@ -1,19 +1,16 @@
 import logging
 import json
-from io import BytesIO
+import traceback
+import uuid
 from pathlib import Path
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from PIL import Image, ImageOps
 
-try:
-    import pytesseract
-except ImportError:
-    pytesseract = None
-
+from services.db import get_database_status
 from services.ensemble_service import ensemble_decision
 from services.history_store import (
+    _insert_record,
     batch_id,
     epoch_millis_to_iso,
     list_scan_records,
@@ -21,7 +18,8 @@ from services.history_store import (
 )
 from services.html_analyzer import analyze_html
 from services.ocr_ml_service import predict_ocr_text
-from services.qr_service import analyze_qr_image
+from services.ocr_service import extract_text_from_upload
+from services.qr_service import decode_qr_image
 from services.url_ml_service import predict_url
 
 
@@ -39,6 +37,22 @@ REPORT_FILES = {
 
 app = Flask(__name__)
 CORS(app)
+
+
+def _log_database_startup_status():
+    try:
+        status = get_database_status()
+        logger.info(
+            "PostgreSQL connected successfully on startup database=%s table=%s count=%d",
+            status["database"],
+            status["table"],
+            status["table_count"],
+        )
+    except Exception as exc:
+        logger.exception("PostgreSQL startup check failed: %s", exc)
+
+
+_log_database_startup_status()
 
 
 def _json_error(message, status_code=400, details=None):
@@ -77,18 +91,126 @@ def _load_report(path):
     }
 
 
-def extract_text_from_uploaded_image(file_storage):
-    logger.info("OCR image upload received: filename=%s", file_storage.filename)
-    if pytesseract is None:
-        raise RuntimeError("pytesseract Python package is not installed")
+def _append_reason(result, reason):
+    result.setdefault("reasons", []).append(reason)
+    return result
 
-    raw = file_storage.read()
-    logger.info("OCR image bytes read: %d", len(raw))
-    image = Image.open(BytesIO(raw))
-    image = ImageOps.grayscale(image)
-    text = pytesseract.image_to_string(image).strip()
-    logger.info("OCR text extraction complete: %d characters", len(text))
-    return text
+
+@app.route("/", methods=["GET"])
+@app.route("/api/health", methods=["GET"])
+def health_check():
+    return jsonify({
+        "name": "KingPhisher backend",
+        "status": "ok",
+        "message": "Backend is running. Use the React frontend at http://127.0.0.1:5173.",
+        "endpoints": {
+            "url": "POST /api/url",
+            "ocr": "POST /api/ocr",
+            "qr": "POST /api/qr",
+            "html": "POST /api/html",
+            "ensemble": "POST /api/ensemble",
+            "history": "GET /api/history",
+            "reports": "GET /api/reports",
+        },
+    })
+
+
+@app.route("/api/db-test", methods=["GET"])
+def db_test():
+    test_id = f"db-test-{uuid.uuid4().hex[:12]}"
+    record = {
+        "id": test_id,
+        "url": "https://kingphisher.local/db-test",
+        "timestamp": None,
+        "status": "Safe",
+        "prediction": "Safe",
+        "risk_score": 0.0,
+        "confidence": 1.0,
+        "source": "db-test",
+        "scan_type": "db-test",
+        "extracted_text": "",
+        "decoded_url": "",
+        "recommendation": "Database write test row.",
+        "blocked": False,
+    }
+    try:
+        _insert_record(record)
+        status = get_database_status()
+        return jsonify({
+            "success": True,
+            "inserted_id": test_id,
+            "database": status["database"],
+            "table": status["table"],
+            "table_count": status["table_count"],
+        })
+    except Exception as exc:
+        logger.exception("Database test route failed")
+        return jsonify({
+            "success": False,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+def _url_only_scan(url):
+    url_result = predict_url(url)
+    result = ensemble_decision(url_result=url_result)
+    result["scan_mode"] = "url_ml_only"
+    return result
+
+
+def _manual_url_scan(url):
+    logger.info("Manual URL scan workflow started for %s", url)
+    url_result = predict_url(url)
+    html_result = None
+    fallback_reasons = []
+
+    try:
+        candidate_html_result = analyze_html(url)
+        if candidate_html_result.get("error"):
+            fallback_reasons.append(
+                f"HTML fetch failed; final result uses URL ML only: {candidate_html_result['error']}"
+            )
+        else:
+            html_result = candidate_html_result
+    except Exception as exc:
+        logger.exception("HTML analyzer failed for %s", url)
+        fallback_reasons.append(f"HTML analysis failed; final result uses URL ML only: {exc}")
+
+    result = ensemble_decision(url_result=url_result, html_result=html_result)
+    result["scan_mode"] = "manual_url"
+    result["html_score"] = result.get("html_score")
+    for reason in fallback_reasons:
+        _append_reason(result, reason)
+    logger.info("Manual URL scan workflow complete for %s", url)
+    return result
+
+
+def _chrome_extension_scan(url, image_file):
+    logger.info("Chrome extension scan workflow started for %s", url)
+    url_result = predict_url(url)
+    ocr_result = None
+    extracted_text = ""
+    fallback_reasons = []
+
+    if image_file is None:
+        fallback_reasons.append("Screenshot was not provided; final result uses URL ML only")
+    else:
+        try:
+            extracted_text = extract_text_from_upload(image_file)
+            ocr_result = predict_ocr_text(extracted_text)
+        except Exception as exc:
+            logger.exception("OCR workflow failed for extension scan %s", url)
+            fallback_reasons.append(f"OCR failed; final result uses URL ML only: {exc}")
+
+    result = ensemble_decision(url_result=url_result, ocr_result=ocr_result)
+    result["scan_mode"] = "chrome_extension"
+    if extracted_text:
+        result["extracted_text"] = extracted_text
+    for reason in fallback_reasons:
+        _append_reason(result, reason)
+    logger.info("Chrome extension scan workflow complete for %s", url)
+    return result
 
 
 @app.route("/predict", methods=["POST"])
@@ -118,7 +240,7 @@ def ocr_detection():
         return _json_error("No image file provided", 400)
 
     try:
-        extracted_text = extract_text_from_uploaded_image(image_file)
+        extracted_text = extract_text_from_upload(image_file)
         ocr_result = predict_ocr_text(extracted_text)
     except Exception as exc:
         logger.exception("OCR detection failed")
@@ -141,11 +263,23 @@ def qr_detection():
         return _json_error("No QR image file provided", 400)
 
     try:
-        result = analyze_qr_image(image_file)
+        decoded_url = decode_qr_image(image_file)
+        detection = _manual_url_scan(decoded_url)
     except Exception as exc:
         logger.exception("QR phishing detection failed")
         return _json_error("QR phishing detection failed", 500, str(exc))
 
+    reasons = [
+        f"Decoded QR URL: {decoded_url}",
+        *detection.get("reasons", []),
+    ]
+    result = {
+        **detection,
+        "decoded_url": decoded_url,
+        "explanation": reasons,
+        "reasons": reasons,
+        "scan_mode": "qr_manual_url",
+    }
     save_scan_record(result, url=result.get("decoded_url"), scan_type="qr", source="api")
     logger.info("QR phishing detection API request complete")
     return jsonify(result)
@@ -167,37 +301,32 @@ def html_analysis():
 @app.route("/api/ensemble", methods=["POST"])
 def ensemble_detection():
     logger.info("Ensemble API request started")
-    ocr_text = None
 
     if request.content_type and request.content_type.startswith("multipart/form-data"):
         url = str(request.form.get("url", "")).strip()
-        use_html = request.form.get("use_html", "true").lower() != "false"
         image_file = request.files.get("image") or request.files.get("file")
-        if image_file is not None:
-            try:
-                ocr_text = extract_text_from_uploaded_image(image_file)
-            except Exception as exc:
-                logger.exception("Ensemble OCR extraction failed")
-                return _json_error("Ensemble OCR extraction failed", 500, str(exc))
+        scan_source = request.form.get("source", "extension")
     else:
         payload = _get_json_payload()
         url = str(payload.get("url", "")).strip()
-        use_html = bool(payload.get("use_html", True))
-        ocr_text = payload.get("ocr_text")
+        image_file = None
+        scan_source = payload.get("source", "web")
 
     if not url:
         return _json_error("No URL provided", 400)
 
     try:
-        result = ensemble_decision(url=url, ocr_text=ocr_text, use_html=use_html)
+        if request.content_type and request.content_type.startswith("multipart/form-data"):
+            result = _chrome_extension_scan(url, image_file)
+            history_type = "extension"
+        else:
+            result = _manual_url_scan(url)
+            history_type = "manual_url"
     except Exception as exc:
         logger.exception("Ensemble detection failed for %s", url)
         return _json_error("Ensemble detection failed", 500, str(exc))
 
-    if ocr_text is not None:
-        result["extracted_text"] = ocr_text
-
-    save_scan_record(result, url=url, scan_type="url", source="api")
+    save_scan_record(result, url=url, scan_type=history_type, source=scan_source)
     logger.info("Ensemble API request complete for %s", url)
     return jsonify(result)
 
@@ -264,7 +393,7 @@ def browser_history_scan():
         seen.add(url)
 
         try:
-            result = ensemble_decision(url=url, use_html=use_html)
+            result = _manual_url_scan(url) if use_html else _url_only_scan(url)
             timestamp = epoch_millis_to_iso(item.get("lastVisitTime")) if isinstance(item, dict) else None
             record = save_scan_record(
                 {**result, "browser_title": item.get("title", "") if isinstance(item, dict) else ""},

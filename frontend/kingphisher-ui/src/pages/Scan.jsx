@@ -57,7 +57,7 @@ export default function Scan({ modePreset = "url", setHistory, notify, onScanCom
     try {
       let data;
       if (modePreset === "url") {
-        data = await callJson(config.endpoint, { url: url.trim(), use_html: true });
+        data = await callJson(config.endpoint, { url: url.trim() });
       } else {
         const formData = new FormData();
         formData.append("image", image);

@@ -13,3 +13,4 @@ pillow
 pytesseract
 opencv-python
 pyzbar
+psycopg2-binary

@@ -1,5 +1,3897 @@
 [
   {
+    "id": "7965f4aa30c0498694216558d7f09588",
+    "url": "https://leetcode.com/",
+    "timestamp": "2026-07-10T05:55:52.260968Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.228,
+    "confidence": 77.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML fetch failed; final result uses URL ML only: 403 Client Error: Forbidden for url: https://leetcode.com/"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.228,
+          "confidence": 77.18,
+          "features": [
+            21,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.23"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "5b88a0d40c3e464087e25baca5138aa6",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:55:42.057602Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "db30d8c75dab4f8e8af04cf05dfd9e20",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:55:42.138286Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "138eb34586434c3d9e20ebd34216914f",
+    "url": "http://127.0.0.1:5000/api/db-test",
+    "timestamp": "2026-07-10T05:45:03.871951Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.908,
+    "confidence": 90.8,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.908,
+          "confidence": 90.85,
+          "features": [
+            33,
+            3,
+            1,
+            0,
+            0,
+            4,
+            10,
+            1,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.91"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "970492f1fb594c5b879a8b0015cd995d",
+    "url": "http://127.0.0.1:5000/api/db-test",
+    "timestamp": "2026-07-10T05:45:03.856070Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.908,
+    "confidence": 90.8,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.908,
+          "confidence": 90.85,
+          "features": [
+            33,
+            3,
+            1,
+            0,
+            0,
+            4,
+            10,
+            1,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.91"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "467751da76ce4a61aafb8b3971d55f4c",
+    "url": "http://127.0.0.1:5000/api/db-test",
+    "timestamp": "2026-07-10T05:44:52.368566Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.908,
+    "confidence": 90.8,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.908,
+          "confidence": 90.85,
+          "features": [
+            33,
+            3,
+            1,
+            0,
+            0,
+            4,
+            10,
+            1,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.91"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "ed4f2df91f484ed3ab81053a75eb5987",
+    "url": "http://127.0.0.1:5000/api/db-test",
+    "timestamp": "2026-07-10T05:44:52.525103Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.908,
+    "confidence": 90.8,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.908,
+          "confidence": 90.85,
+          "features": [
+            33,
+            3,
+            1,
+            0,
+            0,
+            4,
+            10,
+            1,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.91"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "d13ecedd74124676a2165a6ade783815",
+    "url": "https://leetcode.com",
+    "timestamp": "2026-07-10T05:39:57.724954Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.018,
+    "confidence": 98.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML fetch failed; final result uses URL ML only: 403 Client Error: Forbidden for url: https://leetcode.com/"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.018,
+          "confidence": 98.19,
+          "features": [
+            20,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.02"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "e6a02327638540e09d7d611b094e84cc",
+    "url": "http://localhost:5173",
+    "timestamp": "2026-07-10T05:39:32.895164Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.31,
+    "confidence": 68.95,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML analysis: Safe",
+      "+0.10 Website does not use HTTPS encryption"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.442,
+          "confidence": 55.78,
+          "features": [
+            21,
+            0,
+            0,
+            0,
+            0,
+            2,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.44"
+          ]
+        }
+      },
+      {
+        "module": "HTML Analyzer",
+        "weight": 0.25,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.1,
+          "confidence": 90.0,
+          "reasons": [
+            "+0.10 Website does not use HTTPS encryption"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "09a7b4533c594130a18385ab8eabf3fb",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:39:27.107025Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "74a870208c0c464f9f18780704ded9bd",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:39:27.110681Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "12bf015148144c638cbc6737e914e2be",
+    "url": "https://leetcode.com",
+    "timestamp": "2026-07-10T05:21:18.909903Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.018,
+    "confidence": 98.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML fetch failed; final result uses URL ML only: 403 Client Error: Forbidden for url: https://leetcode.com/"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.018,
+          "confidence": 98.19,
+          "features": [
+            20,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.02"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "0a0eee233a51407ab7261eafcdded6a2",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:21:09.254212Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "5144074e113a407b87e1f539407a8ba3",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:21:09.146965Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "ab71cdc2d6e347228a06c4c8cfbd70ee",
+    "url": "https://leetcode.com",
+    "timestamp": "2026-07-10T05:07:04.057535Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.018,
+    "confidence": 98.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML fetch failed; final result uses URL ML only: 403 Client Error: Forbidden for url: https://leetcode.com/"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.018,
+          "confidence": 98.19,
+          "features": [
+            20,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.02"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "879954c9963d430cb540d65096be4b65",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:06:32.040901Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "6fec9a227f854386b3ea2c622b2f0772",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-10T05:06:32.037320Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "12c5462379f54b7a89e27d3f310a566e",
+    "url": "https://leetcode.com/",
+    "timestamp": "2026-07-10T05:06:23.849599Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.228,
+    "confidence": 77.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.228,
+          "confidence": 77.18,
+          "features": [
+            21,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.23"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "44735644eba4411089e86c0910589aa5",
+    "url": "https://leetcode.com/",
+    "timestamp": "2026-07-10T05:06:23.779847Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.228,
+    "confidence": 77.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.228,
+          "confidence": 77.18,
+          "features": [
+            21,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.23"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "2c3c2e8ea87141e0832b8392031caf1d",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMzU1MjNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-10T05:06:20.718241Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "58d2079816784d7dba6bf9b69dae8cab",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMzU1MjNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-10T05:06:20.711622Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "3049803829bf4d83b309f810a87aeeda",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMzU1MjNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-10T05:05:46.576947Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "a18a3ee62afc4af3b8b2a5081bc3baee",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMzU1MjNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-10T05:05:46.585576Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "03c564a3966d4b438ee1ad447facc2ef",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:34.961447Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "d5f7b118c17b47fe8cab3b4328661fa3",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:34.006218Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "34c2ab4f1c0a48f8a4938946ab574d1c",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:33.940189Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "af9af0d4f62e448f84f632a0099af2df",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:02.151722Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "c7c1bed4ee5f4db99cc387e7c2f81cdd",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:01.883137Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "12143a6e2e5840c68a87a4d31479ddd6",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:23:01.839873Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "3b192f785e254b91872c2f42f94e5e3e",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:21:26.639662Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "8d77c963a6b64de4b497ef82655057e5",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:21:26.301608Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "a26627e515404ef98c87f5172291b5d0",
+    "url": "https://cmr.edu.in/",
+    "timestamp": "2026-07-09T15:21:26.231882Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.12,
+    "confidence": 88.0,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.12,
+          "confidence": 87.98,
+          "features": [
+            19,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            10
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.12"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "647eb36ca06f43d0846c0e954803f273",
+    "url": "https://www.bing.com/search?q=cmr&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=cmr&sc=12-3&sk=&cvid=BED25219C0544E28B976ACE3BEEE1516",
+    "timestamp": "2026-07-09T15:21:25.704242Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.805,
+    "confidence": 80.5,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.805,
+          "confidence": 80.52,
+          "features": [
+            122,
+            2,
+            2,
+            0,
+            1,
+            3,
+            25,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.81"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "5f4c48624a8146e9a952f28eb923a66f",
+    "url": "https://www.bing.com/search?q=cmr&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=cmr&sc=12-3&sk=&cvid=BED25219C0544E28B976ACE3BEEE1516",
+    "timestamp": "2026-07-09T15:21:25.638730Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.805,
+    "confidence": 80.5,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.805,
+          "confidence": 80.52,
+          "features": [
+            122,
+            2,
+            2,
+            0,
+            1,
+            3,
+            25,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.81"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "114de1c5ef6542ca9e244d9a833129b3",
+    "url": "https://www.bing.com/search?q=cmr&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=cmr&sc=12-3&sk=&cvid=BED25219C0544E28B976ACE3BEEE1516",
+    "timestamp": "2026-07-09T15:21:02.785047Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.805,
+    "confidence": 80.5,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.805,
+          "confidence": 80.52,
+          "features": [
+            122,
+            2,
+            2,
+            0,
+            1,
+            3,
+            25,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.81"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "13b2526abab249ceb2f4d64277b09661",
+    "url": "https://www.bing.com/search?q=cmr&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=cmr&sc=12-3&sk=&cvid=BED25219C0544E28B976ACE3BEEE1516",
+    "timestamp": "2026-07-09T15:21:02.735001Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.805,
+    "confidence": 80.5,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.805,
+          "confidence": 80.52,
+          "features": [
+            122,
+            2,
+            2,
+            0,
+            1,
+            3,
+            25,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.81"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "351dd0c8ccb74a48936b526f09849cb6",
+    "url": "https://www.bing.com/search?q=cmr&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=cmr&sc=12-3&sk=&cvid=BED25219C0544E28B976ACE3BEEE1516",
+    "timestamp": "2026-07-09T15:20:56.112234Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.805,
+    "confidence": 80.5,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.805,
+          "confidence": 80.52,
+          "features": [
+            122,
+            2,
+            2,
+            0,
+            1,
+            3,
+            25,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.81"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "2c1ed518e4bc421cbf4148b9d3a837a5",
+    "url": "https://www.bing.com/search?q=cmr&gs_lcrp=EgRlZGdlKgcIARBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJNDEzMDhqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:20:44.727000Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.248,
+    "confidence": 75.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.248,
+          "confidence": 75.24,
+          "features": [
+            204,
+            2,
+            0,
+            0,
+            1,
+            3,
+            3,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.25"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "7cc58b2251254536bec2e182ff004e8d",
+    "url": "https://www.bing.com/search?q=cmr&gs_lcrp=EgRlZGdlKgcIARBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJNDEzMDhqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:20:44.655779Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.248,
+    "confidence": 75.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.248,
+          "confidence": 75.24,
+          "features": [
+            204,
+            2,
+            0,
+            0,
+            1,
+            3,
+            3,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.25"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "5a893c14090941b39ac45604b5bc3861",
+    "url": "https://www.bing.com/search?pglt=393&q=cmr&cvid=4c16330992024f359ab988d7446a20bc&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQRRg7MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQRRg9MgYICBBFGDzSAQgzNjM5ajBqN6gCCLACAQ&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:20:07.115805Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.954,
+    "confidence": 95.4,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.954,
+          "confidence": 95.43,
+          "features": [
+            249,
+            2,
+            0,
+            0,
+            1,
+            3,
+            32,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.95"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "399c912483244504b5c5103a15079abf",
+    "url": "https://www.bing.com/search?pglt=393&q=cmr&cvid=4c16330992024f359ab988d7446a20bc&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQRRg7MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQRRg9MgYICBBFGDzSAQgzNjM5ajBqN6gCCLACAQ&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:20:07.055702Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.954,
+    "confidence": 95.4,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.954,
+          "confidence": 95.43,
+          "features": [
+            249,
+            2,
+            0,
+            0,
+            1,
+            3,
+            32,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.95"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "7eccb253734d4ef4a6eaf242cb143557",
+    "url": "https://chatgpt.com/c/6a4fb847-ad0c-83e8-b55b-dda518c88881",
+    "timestamp": "2026-07-09T15:17:46.530655Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.149,
+    "confidence": 85.12,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML analysis: Safe",
+      "+0.05 Form has a missing or empty action",
+      "+0.12 Obfuscated or dynamically-written script behavior detected",
+      "+0.06 Page contains links to different domains"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.098,
+          "confidence": 90.19,
+          "features": [
+            58,
+            1,
+            4,
+            0,
+            0,
+            4,
+            19,
+            0,
+            1,
+            11
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.10"
+          ]
+        }
+      },
+      {
+        "module": "HTML Analyzer",
+        "weight": 0.25,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.23,
+          "confidence": 77.0,
+          "reasons": [
+            "+0.05 Form has a missing or empty action",
+            "+0.12 Obfuscated or dynamically-written script behavior detected",
+            "+0.06 Page contains links to different domains"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "b991dfda95d44e5c8a09bd53e7a36d2e",
+    "url": "https://www.youtube.com/results?search_query=phonepe+system+design",
+    "timestamp": "2026-07-09T15:17:33.158877Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.222,
+    "confidence": 77.78,
+    "reasons": [
+      "URL analysis: Safe",
+      "HTML analysis: Suspicious",
+      "+0.12 External iframe content detected",
+      "+0.14 JavaScript redirect behavior detected",
+      "+0.12 Obfuscated or dynamically-written script behavior detected",
+      "+0.06 Page contains links to different domains"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.086,
+          "confidence": 91.36,
+          "features": [
+            66,
+            2,
+            0,
+            0,
+            1,
+            3,
+            0,
+            0,
+            1,
+            15
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.09"
+          ]
+        }
+      },
+      {
+        "module": "HTML Analyzer",
+        "weight": 0.25,
+        "result": {
+          "prediction": "Suspicious",
+          "risk_score": 0.44,
+          "confidence": 44.0,
+          "reasons": [
+            "+0.12 External iframe content detected",
+            "+0.14 JavaScript redirect behavior detected",
+            "+0.12 Obfuscated or dynamically-written script behavior detected",
+            "+0.06 Page contains links to different domains"
+          ]
+        }
+      }
+    ],
+    "source": "web",
+    "scan_type": "manual_url",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "ddb06dd941bc40f2a5d7de7ee05a4aef",
+    "url": "https://www.cmrit.ac.in/",
+    "timestamp": "2026-07-09T15:10:15.830296Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.176,
+    "confidence": 82.4,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.176,
+          "confidence": 82.4,
+          "features": [
+            24,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            15
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.18"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "3ee3a4342b9a42279d69e6caacb2b255",
+    "url": "https://www.cmrit.ac.in/",
+    "timestamp": "2026-07-09T15:10:15.798410Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.176,
+    "confidence": 82.4,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.176,
+          "confidence": 82.4,
+          "features": [
+            24,
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            15
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.18"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "77598972d4e24b2a8731ea26f182cc42",
+    "url": "https://www.bing.com/search?qs=HS&pq=cmrit&sk=CSYN1MT1CT1AS4LS5UAS1LC2HS1&sc=20-5&pglt=393&q=cmrit+bengaluru&cvid=a363f539bbcf460e9d6bcdd30b9ed704&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxBFGD0yBggIEEUYPNIBCDQwODFqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:10:14.160690Z",
+    "status": "Suspicious",
+    "prediction": "Suspicious",
+    "risk_score": 0.581,
+    "confidence": 58.1,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.581,
+          "confidence": 58.13,
+          "features": [
+            317,
+            2,
+            1,
+            0,
+            1,
+            3,
+            34,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.58"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Verify the sender, domain, and page intent before continuing.",
+    "blocked": true
+  },
+  {
+    "id": "a719746518a744d5ade760c630c16db8",
+    "url": "https://www.bing.com/search?qs=HS&pq=cmrit&sk=CSYN1MT1CT1AS4LS5UAS1LC2HS1&sc=20-5&pglt=393&q=cmrit+bengaluru&cvid=a363f539bbcf460e9d6bcdd30b9ed704&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxBFGD0yBggIEEUYPNIBCDQwODFqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:10:14.108221Z",
+    "status": "Suspicious",
+    "prediction": "Suspicious",
+    "risk_score": 0.581,
+    "confidence": 58.1,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.581,
+          "confidence": 58.13,
+          "features": [
+            317,
+            2,
+            1,
+            0,
+            1,
+            3,
+            34,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.58"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Verify the sender, domain, and page intent before continuing.",
+    "blocked": true
+  },
+  {
+    "id": "d7e5a3ac97394daaaf97d42e0efb782b",
+    "url": "https://www.bing.com/search?qs=HS&pq=cmrit&sk=CSYN1MT1CT1AS4LS5UAS1LC2HS1&sc=20-5&pglt=393&q=cmrit+bengaluru&cvid=a363f539bbcf460e9d6bcdd30b9ed704&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxBFGD0yBggIEEUYPNIBCDQwODFqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:58.707296Z",
+    "status": "Suspicious",
+    "prediction": "Suspicious",
+    "risk_score": 0.581,
+    "confidence": 58.1,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.581,
+          "confidence": 58.13,
+          "features": [
+            317,
+            2,
+            1,
+            0,
+            1,
+            3,
+            34,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.58"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Verify the sender, domain, and page intent before continuing.",
+    "blocked": true
+  },
+  {
+    "id": "91fae65d3bf1424382a956cda0a34f4b",
+    "url": "https://www.bing.com/search?qs=HS&pq=cmrit&sk=CSYN1MT1CT1AS4LS5UAS1LC2HS1&sc=20-5&pglt=393&q=cmrit+bengaluru&cvid=a363f539bbcf460e9d6bcdd30b9ed704&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxBFGD0yBggIEEUYPNIBCDQwODFqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:58.674127Z",
+    "status": "Suspicious",
+    "prediction": "Suspicious",
+    "risk_score": 0.581,
+    "confidence": 58.1,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.581,
+          "confidence": 58.13,
+          "features": [
+            317,
+            2,
+            1,
+            0,
+            1,
+            3,
+            34,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.58"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Verify the sender, domain, and page intent before continuing.",
+    "blocked": true
+  },
+  {
+    "id": "ae101a95971f49928be4c430e7a73ad5",
+    "url": "https://www.bing.com/search?pglt=393&q=cmr&cvid=a8319f88d2204ac980532481de7f800a&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg7MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBBFGD3SAQgxOTgzajBqN6gCCLACAQ&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:42.425078Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.953,
+    "confidence": 95.3,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.953,
+          "confidence": 95.32,
+          "features": [
+            249,
+            2,
+            0,
+            0,
+            1,
+            3,
+            30,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.95"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "a20c0628187b499fb23a5b2d5e841753",
+    "url": "https://www.bing.com/search?pglt=393&q=cmr&cvid=a8319f88d2204ac980532481de7f800a&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg7MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBBFGD3SAQgxOTgzajBqN6gCCLACAQ&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:42.336735Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.953,
+    "confidence": 95.3,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.953,
+          "confidence": 95.32,
+          "features": [
+            249,
+            2,
+            0,
+            0,
+            1,
+            3,
+            30,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.95"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "fd2b66a86628485eabdaf99a059af6cd",
+    "url": "https://leetcode.com/",
+    "timestamp": "2026-07-09T15:09:23.947368Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.228,
+    "confidence": 77.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.228,
+          "confidence": 77.18,
+          "features": [
+            21,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.23"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "924185e0d2254a5281d291cc1efd9b95",
+    "url": "https://leetcode.com/",
+    "timestamp": "2026-07-09T15:09:23.914153Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.228,
+    "confidence": 77.2,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.228,
+          "confidence": 77.18,
+          "features": [
+            21,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.23"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "f67e574d571f41948381b4d824dd7bf8",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMjk1MzRqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:22.366116Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "9b24db7509da4bdcaf8f85ed00edcd53",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMjk1MzRqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:22.321932Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "75c7d77934cb4889b2f466c2723a9f5c",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMjk1MzRqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:18.608952Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "99d6e01b2eb7422e9818651e1b91d2ed",
+    "url": "https://www.bing.com/search?q=leetcode&gs_lcrp=EgRlZGdlKgcIAhBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgcIAxBFGMIDMgcIBBBFGMIDMgcIBRBFGMIDMgcIBhBFGMIDMgcIBxBFGMID0gEJMjk1MzRqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:09:18.550526Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.301,
+    "confidence": 69.9,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.301,
+          "confidence": 69.93,
+          "features": [
+            209,
+            2,
+            0,
+            0,
+            1,
+            3,
+            4,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.30"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "07b5c8c28dff4c1fb0e7d5d4dee65da4",
+    "url": "https://www.bing.com/search?qs=HS&pq=rummy&sk=CSYN1UAS3LS5AS6LC2&sc=21-5&pglt=393&q=rummy+circle&cvid=2c1f12425ee64557babfda534ee56cfc&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEEUYPNIBCDQ1NzNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:08:53.881054Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.622,
+    "confidence": 62.2,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.622,
+          "confidence": 62.16,
+          "features": [
+            305,
+            2,
+            1,
+            0,
+            1,
+            3,
+            31,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.62"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "b99cc8c35e6a4251822e5de5eea27aa8",
+    "url": "https://www.bing.com/search?qs=HS&pq=rummy&sk=CSYN1UAS3LS5AS6LC2&sc=21-5&pglt=393&q=rummy+circle&cvid=2c1f12425ee64557babfda534ee56cfc&gs_lcrp=EgRlZGdlKgcIABAAGPkHMgcIABAAGPkHMgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEEUYPNIBCDQ1NzNqMGo3qAIIsAIB&FORM=ANNTA1&PC=UCPDDB",
+    "timestamp": "2026-07-09T15:08:53.780682Z",
+    "status": "Phishing",
+    "prediction": "Phishing",
+    "risk_score": 0.622,
+    "confidence": 62.2,
+    "reasons": [
+      "URL analysis: Phishing",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Phishing",
+          "risk_score": 0.622,
+          "confidence": 62.16,
+          "features": [
+            305,
+            2,
+            1,
+            0,
+            1,
+            3,
+            31,
+            0,
+            1,
+            12
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.62"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "Block access and avoid submitting credentials or payment information.",
+    "blocked": true
+  },
+  {
+    "id": "a0ffac179ebc421997f0d154153fead8",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-09T15:08:49.311495Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
+    "id": "94b20c4aaf044ba4b42f2f3edb859a3b",
+    "url": "http://localhost:5173/",
+    "timestamp": "2026-07-09T15:08:49.310481Z",
+    "status": "Safe",
+    "prediction": "Safe",
+    "risk_score": 0.163,
+    "confidence": 83.7,
+    "reasons": [
+      "URL analysis: Safe",
+      "Screenshot was not provided; final result uses URL ML only"
+    ],
+    "details": [
+      {
+        "module": "URL ML",
+        "weight": 0.4,
+        "result": {
+          "prediction": "Safe",
+          "risk_score": 0.163,
+          "confidence": 83.74,
+          "features": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            0,
+            0,
+            14
+          ],
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.8381,
+            "precision": 0.6183,
+            "recall": 0.7345,
+            "f1_score": 0.6714,
+            "confusion_matrix": [
+              [
+                68258,
+                10361
+              ],
+              [
+                6065,
+                16780
+              ]
+            ]
+          },
+          "reasons": [
+            "Random Forest evaluated lexical and structural URL features",
+            "Phishing probability: 0.16"
+          ]
+        }
+      }
+    ],
+    "source": "extension",
+    "scan_type": "extension",
+    "extracted_text": "",
+    "decoded_url": "",
+    "recommendation": "No immediate phishing indicators were detected.",
+    "blocked": false
+  },
+  {
     "id": "b892e69e41554bc68d0d33995831d667",
     "url": "https://wa.me/qr/7PCWAU63Y3QUA1",
     "timestamp": "2026-06-12T04:09:16.239542Z",
